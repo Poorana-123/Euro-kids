@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import "../styles/App.css";
 import Kids1 from "../assets/Kids1.jpg";
-import kids2 from "../assets/ukg.webp";
+import Kids2 from "../assets/ukg.webp";
 import team from "../assets/team.webp";
 
 const learningPaths = [
@@ -226,7 +226,7 @@ function Home() {
 
               <div className="ek-hero-image-frame">
                 <img
-                  src={kids2}
+                  src={Kids2}
                   alt="A young child enjoying a playful moment"
                 />
               </div>
