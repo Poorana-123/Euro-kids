@@ -1,0 +1,352 @@
+/* =====================================
+   EURO KIDS NAVBAR
+===================================== */
+
+.euro-navbar {
+  width: 100%;
+  height: 88px;
+
+  background-color: #ffffff;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid #e8edf5;
+
+  box-shadow: 0 3px 15px rgba(29, 64, 133, 0.05);
+}
+
+
+/* =====================================
+   NAVBAR CONTAINER
+===================================== */
+
+.euro-navbar-container {
+  width: 100%;
+  max-width: 1320px;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 0 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.euro-navbar-logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.euro-navbar-logo img {
+  width: 155px;
+  height: 176px;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+.euro-navbar-logo:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =====================================
+   NAVIGATION MENU
+===================================== */
+
+.euro-navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 30px;
+}
+
+
+/* Navigation Links */
+
+.euro-navbar-menu > a,
+.euro-dropdown-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #24468b;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.25s ease;
+}
+
+
+/* Underline Hover Effect */
+
+.euro-navbar-menu > a:not(.euro-admission-button)::after,
+.euro-dropdown-link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: #f6c84b;
+
+  transition: width 0.25s ease;
+}
+
+.euro-navbar-menu > a:not(.euro-admission-button):hover,
+.euro-dropdown-link:hover {
+  color: #173575;
+}
+
+.euro-navbar-menu > a:not(.euro-admission-button):hover::after,
+.euro-dropdown-link:hover::after {
+  width: 100%;
+}
+
+
+/* =====================================
+   PROGRAMMES DROPDOWN LINK
+===================================== */
+
+.euro-nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.euro-dropdown-link {
+  text-decoration: none;
+}
+
+
+/* =====================================
+   ADMISSION BUTTON
+===================================== */
+
+.euro-admission-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 43px;
+  padding: 0 21px;
+
+  background-color: #24468b;
+  color: #ffffff !important;
+
+  border: 2px solid #24468b;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.euro-admission-button:hover {
+  background-color: #ffffff;
+  color: #24468b !important;
+
+  border-color: #24468b;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 14px rgba(36, 70, 139, 0.12);
+}
+
+
+/* =====================================
+   MOBILE MENU BUTTON
+===================================== */
+
+.euro-menu-toggle {
+  display: none;
+
+  background: transparent;
+  border: none;
+
+  color: #24468b;
+
+  padding: 8px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 1100px) {
+
+  .euro-navbar-container {
+    padding: 0 25px;
+  }
+
+  .euro-navbar-menu {
+    gap: 19px;
+  }
+
+  .euro-navbar-menu > a,
+  .euro-dropdown-link {
+    font-size: 12px;
+  }
+
+  .euro-navbar-logo img {
+    width: 135px;
+  }
+
+  .euro-admission-button {
+    padding: 0 15px;
+  }
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 850px) {
+
+  .euro-navbar {
+    height: 76px;
+  }
+
+  .euro-navbar-container {
+    padding: 0 20px;
+  }
+
+  .euro-navbar-logo img {
+    width: 130px;
+    height: 68px;
+  }
+
+  .euro-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .euro-navbar-menu {
+    position: absolute;
+
+    top: 76px;
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 15px 22px 24px;
+
+    background-color: #ffffff;
+
+    border-top: 1px solid #edf0f6;
+
+    box-shadow: 0 12px 22px rgba(29, 64, 133, 0.10);
+  }
+
+  .euro-navbar-menu.euro-menu-open {
+    display: flex;
+  }
+
+  .euro-navbar-menu > a:not(.euro-admission-button) {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 15px 5px;
+
+    border-bottom: 1px solid #eef1f7;
+
+    font-size: 14px;
+  }
+
+  .euro-navbar-menu > a:not(.euro-admission-button)::after {
+    display: none;
+  }
+
+  .euro-nav-dropdown {
+    width: 100%;
+  }
+
+  .euro-dropdown-link {
+    width: 100%;
+    justify-content: space-between;
+
+    padding: 15px 5px;
+
+    border-bottom: 1px solid #eef1f7;
+
+    font-size: 14px;
+  }
+
+  .euro-dropdown-link::after {
+    display: none;
+  }
+
+  .euro-admission-button {
+    width: 100%;
+
+    margin-top: 18px;
+
+    min-height: 46px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE DEVICES
+===================================== */
+
+@media (max-width: 400px) {
+
+  .euro-navbar-container {
+    padding: 0 15px;
+  }
+
+  .euro-navbar-logo img {
+    width: 115px;
+  }
+
+}

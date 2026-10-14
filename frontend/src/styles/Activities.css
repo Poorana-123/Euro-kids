@@ -1,0 +1,1189 @@
+/* =========================================
+   EUROKIDS PRESCHOOL - ACTIVITIES PAGE
+========================================= */
+
+.euro-activities-page {
+  --activity-coral: #f27d70;
+  --activity-yellow: #ffd66b;
+  --activity-blue: #8dd3ee;
+  --activity-purple: #c6b0ed;
+  --activity-green: #a6dcb0;
+  --activity-pink: #f4b5c9;
+  --activity-cream: #fffaf2;
+  --activity-text: #42516b;
+  --activity-muted: #818b9a;
+
+  width: 100%;
+  overflow: hidden;
+  color: var(--activity-text);
+  background: var(--activity-cream);
+  font-family: inherit;
+}
+
+.euro-activities-page *,
+.euro-activities-page *::before,
+.euro-activities-page *::after {
+  box-sizing: border-box;
+}
+
+.euro-activities-page a {
+  text-decoration: none;
+}
+
+.euro-activities-page button {
+  font: inherit;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.euro-activities-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 35px;
+
+  min-height: 620px;
+  padding: 75px 8% 105px;
+
+  background: #fff1df;
+}
+
+.euro-activities-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 610px;
+  animation: activityReveal 0.8s ease both;
+}
+
+.euro-activities-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 24px;
+  padding: 10px 16px;
+
+  border: 1px solid #f4d9bd;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.75);
+
+  color: #9b684d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.euro-activities-eyebrow span {
+  color: var(--activity-coral);
+  font-size: 17px;
+}
+
+.euro-activities-hero-content h1 {
+  margin: 0;
+
+  color: #3e4e68;
+  font-size: clamp(43px, 5.1vw, 69px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.euro-activities-hero-content h1 span {
+  display: block;
+  color: #ef7c6c;
+}
+
+.euro-activities-hero-content > p {
+  max-width: 480px;
+  margin: 24px 0 28px;
+
+  color: #768092;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.euro-activities-hero-button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  padding: 0 24px;
+
+  border-radius: 50px;
+  color: #ffffff;
+  background: var(--activity-coral);
+  box-shadow: 0 5px 0 #e7b8a6;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.euro-activities-hero-button span {
+  font-size: 18px;
+}
+
+.euro-activities-hero-button:hover {
+  background: #e96d61;
+  box-shadow: 0 2px 0 #e7b8a6;
+  transform: translateY(3px);
+}
+
+.euro-activities-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 30px;
+
+  color: #818797;
+  font-size: 12px;
+}
+
+.euro-activities-hero-note span {
+  font-size: 23px;
+}
+
+
+/* HERO IMAGE */
+
+.euro-activities-hero-visual {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.euro-activities-hero-photo {
+  width: min(100%, 420px);
+  height: 400px;
+
+  overflow: hidden;
+  border: 9px solid #ffffff;
+  border-radius: 47% 47% 35% 35%;
+
+  background: #f7e0d1;
+  box-shadow: 0 15px 40px rgba(83, 88, 106, 0.1);
+
+  transform: rotate(2deg);
+}
+
+.euro-activities-hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+.euro-activities-hero-photo:hover img {
+  transform: scale(1.05);
+}
+
+.euro-activities-float-card {
+  position: absolute;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 12px 16px;
+
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(65, 75, 98, 0.12);
+}
+
+.euro-activities-float-card > span {
+  display: flex;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: #fff0d1;
+
+  font-size: 22px;
+}
+
+.euro-activities-float-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.euro-activities-float-card strong {
+  color: #4b5a72;
+  font-size: 12px;
+}
+
+.euro-activities-float-card small {
+  color: #8b93a1;
+  font-size: 10px;
+}
+
+.euro-activities-float-one {
+  top: 55px;
+  left: -24px;
+  transform: rotate(-3deg);
+}
+
+.euro-activities-float-two {
+  right: -20px;
+  bottom: 45px;
+  transform: rotate(2deg);
+}
+
+.euro-activities-float-two > span {
+  background: #e6f6e7;
+}
+
+.euro-activities-decor {
+  position: absolute;
+  pointer-events: none;
+}
+
+.decor-star {
+  top: 5px;
+  right: 9%;
+  color: #e9ba46;
+  font-size: 44px;
+  animation: activityFloat 4s ease-in-out infinite;
+}
+
+.decor-heart {
+  top: 36%;
+  right: -1%;
+  color: #e98fa0;
+  font-size: 45px;
+  transform: rotate(15deg);
+}
+
+.decor-sun {
+  bottom: 0;
+  left: 5%;
+  color: #eab84b;
+  font-size: 39px;
+}
+
+.euro-activities-hero-bottom {
+  position: absolute;
+  right: 8%;
+  bottom: 24px;
+  left: 8%;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-top: 17px;
+  border-top: 1px dashed #e8cbb4;
+
+  color: #a28a78;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.euro-activities-intro {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: end;
+  gap: 60px;
+
+  padding: 85px 9% 55px;
+  background: #ffffff;
+}
+
+.euro-activities-section-tag {
+  display: block;
+  margin-bottom: 16px;
+
+  color: #e17b68;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.euro-activities-intro h2,
+.euro-activities-gallery-heading h2,
+.euro-activities-benefits-heading h2,
+.euro-activities-cta h2 {
+  margin: 0;
+
+  color: #3f506a;
+  font-size: clamp(30px, 3.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+.euro-activities-intro h2 span,
+.euro-activities-gallery-heading h2 span,
+.euro-activities-benefits-heading h2 span,
+.euro-activities-cta h2 span {
+  color: #ef8070;
+}
+
+.euro-activities-intro > p {
+  max-width: 450px;
+  margin: 0;
+
+  color: #7b8493;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   ACTIVITY GALLERY
+========================================= */
+
+.euro-activities-gallery {
+  padding: 50px 9% 95px;
+  background: #ffffff;
+  scroll-margin-top: 80px;
+}
+
+.euro-activities-gallery-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.euro-activities-gallery-heading h2 {
+  max-width: 580px;
+}
+
+.euro-activities-gallery-heading > p {
+  max-width: 280px;
+  margin: 0 0 5px;
+
+  color: #828b99;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* FILTERS */
+
+.euro-activities-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+
+  margin-bottom: 35px;
+}
+
+.euro-activities-filter {
+  display: inline-flex;
+  min-height: 43px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 17px;
+
+  cursor: pointer;
+  border: 1px solid #e8e9ef;
+  border-radius: 50px;
+
+  color: #667187;
+  background: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.euro-activities-filter:hover {
+  border-color: #efb7a9;
+  transform: translateY(-2px);
+}
+
+.euro-activities-filter.active {
+  border-color: #f17d6d;
+  color: #ffffff;
+  background: #f17d6d;
+  box-shadow: 0 4px 10px rgba(241, 125, 109, 0.18);
+}
+
+.euro-activities-filter:focus-visible,
+.euro-activities-page a:focus-visible,
+.euro-activities-page button:focus-visible {
+  outline: 3px solid rgba(89, 155, 213, 0.55);
+  outline-offset: 3px;
+}
+
+
+/* ACTIVITY GRID */
+
+.euro-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  align-items: stretch;
+}
+
+.euro-activity-card {
+  min-width: 0;
+  overflow: hidden;
+
+  border: 1px solid #eaeaf0;
+  border-radius: 18px;
+  background: #ffffff;
+
+  box-shadow: 0 5px 22px rgba(67, 79, 101, 0.035);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.euro-activity-card:hover {
+  box-shadow: 0 15px 35px rgba(67, 79, 101, 0.11);
+  transform: translateY(-6px);
+}
+
+.euro-activity-image {
+  position: relative;
+  height: 215px;
+  overflow: hidden;
+  background: #f6e5d9;
+}
+
+.euro-activity-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  transition: transform 0.55s ease;
+}
+
+.euro-activity-card:hover .euro-activity-image img {
+  transform: scale(1.06);
+}
+
+.euro-activity-image-emoji {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #ffffff;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+
+  font-size: 23px;
+}
+
+.euro-activity-age {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  padding: 8px 12px;
+
+  border-radius: 50px;
+  color: #536178;
+  background: rgba(255, 255, 255, 0.94);
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.euro-activity-content {
+  padding: 23px;
+}
+
+.euro-activity-tag {
+  display: inline-block;
+  margin-bottom: 11px;
+
+  color: #d27c68;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.euro-activity-content h3 {
+  margin: 0 0 11px;
+
+  color: #465570;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.euro-activity-content > p {
+  min-height: 88px;
+  margin: 0 0 20px;
+
+  color: #808a99;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.euro-activity-content > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #526b91;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.euro-activity-content > a span {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.euro-activity-content > a:hover {
+  color: #e87567;
+}
+
+.euro-activity-content > a:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* CARD COLOR ACCENTS */
+
+.activity-peach {
+  --card-accent: #f4b3a0;
+}
+
+.activity-lavender {
+  --card-accent: #c6b0ed;
+}
+
+.activity-blue {
+  --card-accent: #9ed9ed;
+}
+
+.activity-green {
+  --card-accent: #a9d9ae;
+}
+
+.activity-yellow {
+  --card-accent: #f3d67f;
+}
+
+.activity-pink {
+  --card-accent: #f1b5ca;
+}
+
+.euro-activity-card {
+  border-bottom: 4px solid var(--card-accent, #f4b3a0);
+}
+
+.euro-activities-gallery-note {
+  margin: 35px 0 0;
+
+  color: #89919d;
+  font-size: 11px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.euro-activities-benefits {
+  padding: 85px 9% 95px;
+  background: #fff5e7;
+}
+
+.euro-activities-benefits-heading {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.euro-activities-benefits-heading > p {
+  max-width: 500px;
+  margin: 18px auto 0;
+
+  color: #7e8795;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.euro-activities-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.euro-benefit-item {
+  min-width: 0;
+  padding: 27px 20px;
+
+  border: 1px solid rgba(230, 222, 211, 0.8);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.euro-benefit-item:hover {
+  box-shadow: 0 12px 28px rgba(67, 79, 101, 0.07);
+  transform: translateY(-5px);
+}
+
+.euro-benefit-icon {
+  display: flex;
+  width: 61px;
+  height: 61px;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 19px;
+  border-radius: 20px;
+
+  font-size: 29px;
+}
+
+.benefit-peach {
+  background: #ffe4da;
+}
+
+.benefit-blue {
+  background: #e0f3ff;
+}
+
+.benefit-yellow {
+  background: #fff0bd;
+}
+
+.benefit-green {
+  background: #e0f4df;
+}
+
+.euro-benefit-item h3 {
+  margin: 0 0 10px;
+
+  color: #4a5870;
+  font-size: 16px;
+}
+
+.euro-benefit-item p {
+  margin: 0;
+
+  color: #848d9a;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.euro-activities-cta {
+  position: relative;
+  overflow: hidden;
+
+  margin: 80px 9% 90px;
+  padding: 65px 25px;
+
+  border: 1px solid #f0dfc3;
+  border-radius: 27px;
+  background: #fff0d8;
+
+  text-align: center;
+  scroll-margin-top: 90px;
+}
+
+.euro-activities-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.euro-activities-cta-emoji {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 23px;
+  border: 2px solid #ffffff;
+  border-radius: 23px;
+  background: #ffe3e0;
+
+  font-size: 36px;
+
+  transform: rotate(-6deg);
+}
+
+.euro-activities-cta h2 {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.euro-activities-cta > p {
+  max-width: 520px;
+  margin: 18px auto 26px;
+
+  color: #7d8795;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.euro-activities-cta-button {
+  display: inline-flex;
+  min-height: 51px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  padding: 0 24px;
+
+  border-radius: 50px;
+  color: #ffffff;
+  background: #f17c6d;
+  box-shadow: 0 5px 0 #e4b8a5;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.euro-activities-cta-button span {
+  font-size: 18px;
+}
+
+.euro-activities-cta-button:hover {
+  background: #e86d60;
+  box-shadow: 0 2px 0 #e4b8a5;
+  transform: translateY(3px);
+}
+
+.euro-activities-cta-doodle {
+  position: absolute;
+  z-index: 0;
+  color: #eab9a5;
+  font-size: 55px;
+}
+
+.cta-doodle-one {
+  top: 20px;
+  left: 9%;
+}
+
+.cta-doodle-two {
+  right: 10%;
+  bottom: 20px;
+  color: #c2a7e7;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes activityReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes activityFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(10deg);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .euro-activities-hero {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 20px;
+    padding: 65px 6% 100px;
+  }
+
+  .euro-activities-hero-photo {
+    height: 340px;
+  }
+
+  .euro-activities-float-card {
+    padding: 10px 12px;
+  }
+
+  .euro-activities-float-one {
+    left: -10px;
+  }
+
+  .euro-activities-float-two {
+    right: -10px;
+  }
+
+  .euro-activities-intro,
+  .euro-activities-gallery,
+  .euro-activities-benefits {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .euro-activities-intro {
+    gap: 35px;
+  }
+
+  .euro-activities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .euro-activities-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .euro-activities-cta {
+    margin-right: 6%;
+    margin-left: 6%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+  .euro-activities-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 55px 7% 95px;
+  }
+
+  .euro-activities-hero-content h1 {
+    font-size: clamp(42px, 8vw, 58px);
+    letter-spacing: -1.4px;
+  }
+
+  .euro-activities-hero-content > p {
+    font-size: 13px;
+  }
+
+  .euro-activities-hero-visual {
+    width: 100%;
+    max-width: 470px;
+    justify-self: center;
+  }
+
+  .euro-activities-hero-photo {
+    width: 82%;
+    height: 330px;
+  }
+
+  .euro-activities-float-one {
+    left: 0;
+  }
+
+  .euro-activities-float-two {
+    right: 0;
+  }
+
+  .euro-activities-hero-bottom {
+    right: 7%;
+    left: 7%;
+    font-size: 8px;
+    letter-spacing: 0.9px;
+  }
+
+  .euro-activities-intro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 65px 7% 35px;
+  }
+
+  .euro-activities-gallery {
+    padding: 35px 7% 65px;
+  }
+
+  .euro-activities-gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .euro-activities-gallery-heading > p {
+    max-width: 400px;
+  }
+
+  .euro-activities-filters {
+    gap: 9px;
+    margin-bottom: 27px;
+  }
+
+  .euro-activities-filter {
+    min-height: 40px;
+    padding: 0 13px;
+    font-size: 11px;
+  }
+
+  .euro-activities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+  }
+
+  .euro-activity-image {
+    height: 180px;
+  }
+
+  .euro-activity-content {
+    padding: 18px;
+  }
+
+  .euro-activity-content h3 {
+    font-size: 17px;
+  }
+
+  .euro-activity-content > p {
+    min-height: 115px;
+    font-size: 11px;
+  }
+
+  .euro-activities-benefits {
+    padding: 65px 7%;
+  }
+
+  .euro-activities-cta {
+    margin: 55px 7% 65px;
+    padding: 50px 22px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .euro-activities-hero {
+    padding: 45px 6% 90px;
+  }
+
+  .euro-activities-eyebrow {
+    padding: 8px 12px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .euro-activities-hero-content h1 {
+    font-size: 41px;
+    line-height: 1.15;
+  }
+
+  .euro-activities-hero-content > p {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .euro-activities-hero-button {
+    min-height: 48px;
+    padding: 0 19px;
+    font-size: 12px;
+  }
+
+  .euro-activities-hero-note {
+    align-items: flex-start;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .euro-activities-hero-photo {
+    width: 84%;
+    height: 280px;
+    border-width: 6px;
+  }
+
+  .euro-activities-float-card {
+    gap: 7px;
+    padding: 8px 9px;
+  }
+
+  .euro-activities-float-card > span {
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+  }
+
+  .euro-activities-float-card strong {
+    font-size: 10px;
+  }
+
+  .euro-activities-float-card small {
+    font-size: 8px;
+  }
+
+  .euro-activities-float-one {
+    left: -3px;
+  }
+
+  .euro-activities-float-two {
+    right: -3px;
+  }
+
+  .euro-activities-hero-bottom {
+    font-size: 7px;
+    letter-spacing: 0.4px;
+  }
+
+  .euro-activities-intro {
+    padding: 55px 6% 30px;
+  }
+
+  .euro-activities-intro h2,
+  .euro-activities-gallery-heading h2,
+  .euro-activities-benefits-heading h2,
+  .euro-activities-cta h2 {
+    font-size: 30px;
+  }
+
+  .euro-activities-gallery {
+    padding: 30px 6% 55px;
+  }
+
+  .euro-activities-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .euro-activity-image {
+    height: 225px;
+  }
+
+  .euro-activity-content {
+    padding: 22px;
+  }
+
+  .euro-activity-content h3 {
+    font-size: 20px;
+  }
+
+  .euro-activity-content > p {
+    min-height: 0;
+    margin-bottom: 18px;
+    font-size: 12px;
+  }
+
+  .euro-activities-benefits {
+    padding: 55px 6%;
+  }
+
+  .euro-activities-benefits-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .euro-benefit-item {
+    padding: 23px 13px;
+  }
+
+  .euro-benefit-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .euro-benefit-item h3 {
+    font-size: 14px;
+  }
+
+  .euro-benefit-item p {
+    font-size: 10px;
+  }
+
+  .euro-activities-cta {
+    margin: 40px 6% 45px;
+    padding: 42px 17px;
+  }
+
+  .euro-activities-cta > p {
+    font-size: 12px;
+  }
+
+  .euro-activities-cta-button {
+    padding: 0 18px;
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .euro-activities-page *,
+  .euro-activities-page *::before,
+  .euro-activities-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

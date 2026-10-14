@@ -1,0 +1,1352 @@
+/* =============================================
+   EUROKIDS PROGRAMMES PAGE
+   Colours: Navy blue, yellow, cream and white
+============================================= */
+
+.ek-programmes-page {
+  --ep-navy: #21478f;
+  --ep-dark: #17356f;
+  --ep-blue: #4268b3;
+  --ep-yellow: #ffd15b;
+  --ep-cream: #fffaf1;
+  --ep-soft-blue: #eaf1ff;
+  --ep-white: #ffffff;
+  --ep-text: #293449;
+  --ep-muted: #737d8d;
+
+  overflow: hidden;
+  background: var(--ep-white);
+  color: var(--ep-text);
+  font-family: inherit;
+}
+
+.ek-programmes-page *,
+.ek-programmes-page *::before,
+.ek-programmes-page *::after {
+  box-sizing: border-box;
+}
+
+.ek-programmes-page a {
+  text-decoration: none;
+}
+
+/* =============================================
+   COMMON BUTTONS
+============================================= */
+
+.ek-programmes-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  min-height: 49px;
+  padding: 0 23px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.ek-programmes-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 23px rgba(23, 53, 111, 0.14);
+}
+
+.ek-programmes-btn span {
+  font-size: 19px;
+}
+
+.ek-programmes-btn-yellow {
+  background: var(--ep-yellow);
+  color: var(--ep-dark);
+}
+
+.ek-programmes-btn-yellow:hover {
+  background: #ffe18b;
+}
+
+.ek-programmes-btn-blue {
+  background: var(--ep-navy);
+  color: var(--ep-white);
+}
+
+.ek-programmes-btn-blue:hover {
+  background: var(--ep-dark);
+}
+
+.ek-programmes-section-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--ep-blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+/* =============================================
+   HERO
+============================================= */
+
+.ek-programmes-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 35px;
+  min-height: 490px;
+  margin: 25px 3.5% 0;
+  padding: 60px 6%;
+  overflow: hidden;
+  border-radius: 34px;
+  background:
+    radial-gradient(
+      circle at 5% 0%,
+      rgba(255, 209, 91, 0.25),
+      transparent 32%
+    ),
+    linear-gradient(120deg, #fffaf1, #f1f5ff);
+}
+
+.ek-programmes-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 570px;
+}
+
+.ek-programmes-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid #e1e9fa;
+  border-radius: 50px;
+  background: var(--ep-white);
+  color: var(--ep-navy);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.ek-programmes-eyebrow-star {
+  color: #e5b633;
+  font-size: 17px;
+}
+
+.ek-programmes-hero h1 {
+  margin: 25px 0 18px;
+  color: var(--ep-dark);
+  font-size: clamp(39px, 4.3vw, 60px);
+  font-weight: 850;
+  line-height: 1.09;
+  letter-spacing: -2px;
+}
+
+.ek-programmes-hero h1 span {
+  color: var(--ep-blue);
+}
+
+.ek-programmes-hero-copy > p {
+  max-width: 470px;
+  margin: 0;
+  color: var(--ep-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.ek-programmes-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 19px;
+  margin-top: 28px;
+}
+
+.ek-programmes-hero-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ep-muted);
+  font-size: 11px;
+}
+
+.ek-programmes-hero-note span {
+  color: #e0ad21;
+  font-size: 16px;
+}
+
+/* Hero image collage */
+
+.ek-programmes-hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  height: 330px;
+  justify-self: center;
+}
+
+.ek-programmes-hero-image {
+  position: absolute;
+  overflow: hidden;
+  border: 6px solid #ffffff;
+  border-radius: 28px;
+  background: var(--ep-white);
+  box-shadow: 0 15px 35px rgba(33, 71, 143, 0.12);
+}
+
+.ek-programmes-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ek-hero-image-main {
+  top: 35px;
+  left: 0;
+  width: 68%;
+  height: 225px;
+  transform: rotate(-4deg);
+}
+
+.ek-hero-image-small {
+  top: 5px;
+  right: 0;
+  width: 47%;
+  height: 150px;
+  border-color: var(--ep-yellow);
+  transform: rotate(4deg);
+}
+
+.ek-programmes-hero-note-card {
+  position: absolute;
+  z-index: 3;
+  right: 8%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 17px;
+  border-radius: 16px;
+  background: var(--ep-white);
+  box-shadow: 0 10px 30px rgba(33, 71, 143, 0.14);
+}
+
+.ek-programmes-note-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff2c8;
+  color: var(--ep-navy);
+  font-size: 24px;
+}
+
+.ek-programmes-hero-note-card strong,
+.ek-programmes-hero-note-card small {
+  display: block;
+}
+
+.ek-programmes-hero-note-card strong {
+  color: var(--ep-dark);
+  font-size: 11px;
+}
+
+.ek-programmes-hero-note-card small {
+  margin-top: 4px;
+  color: var(--ep-muted);
+  font-size: 10px;
+}
+
+.ek-programmes-hero-star,
+.ek-programmes-hero-sun,
+.ek-programmes-hero-decoration {
+  position: absolute;
+  pointer-events: none;
+}
+
+.ek-programmes-hero-star {
+  top: 5px;
+  left: 28%;
+  color: #e9b92f;
+  font-size: 31px;
+  animation: ep-float 4s ease-in-out infinite;
+}
+
+.ek-programmes-hero-sun {
+  right: 0;
+  bottom: 30px;
+  color: #e9b92f;
+  font-size: 36px;
+}
+
+.ek-programmes-hero-decoration {
+  right: 45%;
+  bottom: 25px;
+  color: #8e7ad6;
+  font-size: 28px;
+}
+
+/* =============================================
+   INTRODUCTION
+============================================= */
+
+.ek-programmes-intro {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 90px 25px 70px;
+  text-align: center;
+}
+
+.ek-programmes-intro h2,
+.ek-featured-heading h2,
+.ek-learning-approach-heading h2,
+.ek-age-groups-heading h2 {
+  margin: 0;
+  color: var(--ep-dark);
+  font-size: clamp(31px, 3.5vw, 44px);
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: -1.3px;
+}
+
+.ek-programmes-intro h2 span,
+.ek-featured-heading h2 span,
+.ek-learning-approach-heading h2 span,
+.ek-age-groups-heading h2 span {
+  color: var(--ep-blue);
+}
+
+.ek-programmes-intro > p,
+.ek-featured-heading > p,
+.ek-learning-approach-heading > p,
+.ek-age-groups-heading > p {
+  max-width: 600px;
+  margin: 18px auto 0;
+  color: var(--ep-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =============================================
+   FEATURED PROGRAMMES
+   Reference-inspired overlapping cards
+============================================= */
+
+.ek-featured-programmes {
+  position: relative;
+  padding: 80px 5% 55px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 0% 10%,
+      rgba(255, 209, 91, 0.2),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 100% 85%,
+      rgba(209, 174, 233, 0.25),
+      transparent 33%
+    ),
+    #fffdf7;
+}
+
+.ek-featured-heading {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ek-featured-heading h2 {
+  font-size: clamp(32px, 3.8vw, 46px);
+}
+
+.ek-featured-decoration {
+  position: absolute;
+  pointer-events: none;
+}
+
+.ek-featured-sun {
+  top: 100px;
+  left: 7%;
+  color: #e7b832;
+  font-size: 45px;
+}
+
+.ek-featured-star {
+  top: 170px;
+  right: 9%;
+  color: #9177d5;
+  font-size: 37px;
+}
+
+.ek-featured-flower {
+  bottom: 95px;
+  left: 8%;
+  color: #b49c8c;
+  font-size: 38px;
+}
+
+/* Two-card arrangement */
+
+.ek-featured-cards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 960px;
+  min-height: 610px;
+  margin: 25px auto 0;
+}
+
+/* Each card */
+
+.ek-featured-card {
+  position: relative;
+  z-index: 1;
+  width: 47%;
+  max-width: 450px;
+  padding: 17px;
+  border: 1px solid rgba(33, 71, 143, 0.04);
+  border-radius: 29px;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgba(39, 48, 77, 0.09);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.ek-featured-card-first {
+  transform: rotate(-3deg) translateY(-5px);
+}
+
+.ek-featured-card-second {
+  z-index: 2;
+  margin-left: -15px;
+  transform: rotate(3deg) translateY(25px);
+}
+
+.ek-featured-card-first:hover {
+  z-index: 4;
+  transform: rotate(0deg) translateY(-12px);
+  box-shadow: 0 25px 60px rgba(39, 48, 77, 0.15);
+}
+
+.ek-featured-card-second:hover {
+  z-index: 4;
+  transform: rotate(0deg) translateY(12px);
+  box-shadow: 0 25px 60px rgba(39, 48, 77, 0.15);
+}
+
+/* Organic image shape */
+
+.ek-featured-card-image {
+  position: relative;
+  height: 235px;
+  overflow: hidden;
+  background: var(--ep-soft-blue);
+}
+
+.ek-featured-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 38% 25% 34% 23% / 25% 33% 24% 36%;
+  transition:
+    transform 0.5s ease,
+    border-radius 0.5s ease;
+}
+
+.ek-featured-card:hover .ek-featured-card-image img {
+  transform: scale(1.04);
+  border-radius: 22px;
+}
+
+.ek-featured-age {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 9px 12px;
+  border-radius: 50px;
+  background: #ffffff;
+  color: var(--ep-dark);
+  font-size: 10px;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.ek-featured-card-content {
+  padding: 19px 10px 5px;
+}
+
+.ek-featured-card-subtitle {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--ep-blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.ek-featured-card h3 {
+  margin: 0;
+  color: #242b3d;
+  font-size: clamp(20px, 2.2vw, 27px);
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.ek-featured-card p {
+  margin: 12px 0 15px;
+  color: #666d7b;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.ek-featured-card-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 17px;
+}
+
+.ek-featured-card-features span {
+  padding: 7px 9px;
+  border-radius: 50px;
+  background: #f0f4fc;
+  color: var(--ep-dark);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.ek-featured-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 47px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: var(--ep-navy);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ek-featured-card-blue .ek-featured-card-button {
+  background: var(--ep-navy);
+}
+
+.ek-featured-card-yellow .ek-featured-card-button {
+  background: #eab92e;
+  color: var(--ep-dark);
+}
+
+.ek-featured-card-blue .ek-featured-card-button:hover {
+  background: var(--ep-dark);
+}
+
+.ek-featured-card-yellow .ek-featured-card-button:hover {
+  background: var(--ep-yellow);
+}
+
+.ek-featured-card-button span {
+  font-size: 19px;
+}
+
+.ek-featured-bottom-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: var(--ep-muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.ek-featured-bottom-note span {
+  color: #e4b52d;
+  font-size: 17px;
+}
+
+/* =============================================
+   SENIOR PROGRAMME
+============================================= */
+
+.ek-senior-programme {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+  gap: 65px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 105px 6%;
+}
+
+.ek-senior-programme-image {
+  position: relative;
+  min-height: 400px;
+  padding: 15px;
+  border-radius: 35px;
+  background: var(--ep-soft-blue);
+}
+
+.ek-senior-programme-image img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  border-radius: 27px;
+  object-fit: cover;
+}
+
+.ek-senior-image-badge {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  padding: 12px 17px;
+  border-radius: 50px;
+  background: var(--ep-yellow);
+  color: var(--ep-dark);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.ek-senior-programme-content h2 {
+  margin: 0;
+  color: var(--ep-dark);
+  font-size: clamp(31px, 3.2vw, 42px);
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+}
+
+.ek-senior-programme-content h2 span {
+  color: var(--ep-blue);
+}
+
+.ek-senior-programme-content > p {
+  margin: 19px 0;
+  color: var(--ep-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.ek-senior-checklist {
+  display: grid;
+  gap: 13px;
+  margin: 23px 0 27px;
+  padding: 0;
+  list-style: none;
+}
+
+.ek-senior-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ep-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ek-senior-checklist li span {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8f4df;
+  color: #4b8d49;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* =============================================
+   LEARNING APPROACH
+============================================= */
+
+.ek-learning-approach {
+  padding: 85px 7%;
+  background: var(--ep-cream);
+}
+
+.ek-learning-approach-heading {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.ek-learning-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ek-learning-benefit {
+  position: relative;
+  min-width: 0;
+  padding: 30px 25px;
+  overflow: hidden;
+  border: 1px solid #edf0f5;
+  border-radius: 23px;
+  background: #ffffff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ek-learning-benefit:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(33, 71, 143, 0.08);
+}
+
+.ek-learning-benefit-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  place-items: center;
+  border-radius: 17px;
+  font-size: 29px;
+}
+
+.ek-benefit-icon-1 {
+  background: #fff2c8;
+  color: #bc921c;
+}
+
+.ek-benefit-icon-2 {
+  background: #e9efff;
+  color: var(--ep-blue);
+}
+
+.ek-benefit-icon-3 {
+  background: #e8f5e9;
+  color: #4b9b66;
+}
+
+.ek-learning-benefit h3 {
+  margin: 0 0 12px;
+  color: var(--ep-dark);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.ek-learning-benefit p {
+  margin: 0;
+  color: var(--ep-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.ek-learning-benefit-number {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: #e9edf5;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+/* =============================================
+   AGE GROUPS
+============================================= */
+
+.ek-age-groups {
+  padding: 95px 7%;
+}
+
+.ek-age-groups-heading {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.ek-age-group-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ek-age-group-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 27px 23px;
+  border: 1px solid #e8edf5;
+  border-radius: 22px;
+  background: #ffffff;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ek-age-group-card:hover {
+  transform: translateY(-5px);
+  border-color: #cfdaf0;
+  box-shadow: 0 14px 32px rgba(33, 71, 143, 0.08);
+}
+
+.ek-age-group-icon {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 18px;
+  font-size: 28px;
+}
+
+.ek-age-icon-1 {
+  background: #fff2c8;
+  color: #b68a15;
+}
+
+.ek-age-icon-2 {
+  background: #eaf1ff;
+  color: var(--ep-blue);
+}
+
+.ek-age-icon-3 {
+  background: #e8f5e9;
+  color: #4b9b66;
+}
+
+.ek-age-group-label {
+  color: var(--ep-blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.ek-age-group-info h3 {
+  margin: 9px 0;
+  color: var(--ep-dark);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.ek-age-group-info p {
+  margin: 0;
+  color: var(--ep-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.ek-age-group-arrow {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  margin-top: 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ep-soft-blue);
+  color: var(--ep-navy);
+  font-size: 19px;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.ek-age-group-arrow:hover {
+  background: var(--ep-yellow);
+  color: var(--ep-dark);
+}
+
+/* =============================================
+   FINAL CTA
+============================================= */
+
+.ek-programmes-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  align-items: center;
+  gap: 35px;
+  max-width: 1120px;
+  min-height: 370px;
+  margin: 0 auto 90px;
+  padding: 55px 65px;
+  overflow: hidden;
+  border-radius: 30px;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 209, 91, 0.18),
+      transparent 32%
+    ),
+    var(--ep-navy);
+}
+
+.ek-programmes-cta-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.ek-programmes-cta-label {
+  color: var(--ep-yellow);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.ek-programmes-cta h2 {
+  margin: 17px 0;
+  color: #ffffff;
+  font-size: clamp(32px, 3.5vw, 45px);
+  font-weight: 850;
+  line-height: 1.18;
+  letter-spacing: -1.3px;
+}
+
+.ek-programmes-cta h2 span {
+  color: var(--ep-yellow);
+}
+
+.ek-programmes-cta-copy > p {
+  max-width: 430px;
+  margin: 0 0 23px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.ek-programmes-cta-art {
+  position: relative;
+  display: grid;
+  min-height: 250px;
+  place-items: center;
+}
+
+.ek-cta-circle {
+  display: flex;
+  width: 220px;
+  height: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  background: var(--ep-yellow);
+  color: var(--ep-dark);
+  transform: rotate(-7deg);
+}
+
+.ek-cta-circle span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ek-cta-circle strong {
+  margin: 3px 0;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.ek-cta-sun,
+.ek-cta-star,
+.ek-cta-heart {
+  position: absolute;
+}
+
+.ek-cta-sun {
+  top: 0;
+  right: 10%;
+  color: var(--ep-yellow);
+  font-size: 45px;
+  animation: ep-float 4s ease-in-out infinite;
+}
+
+.ek-cta-star {
+  bottom: 10px;
+  left: 12%;
+  color: #a7bdf3;
+  font-size: 36px;
+}
+
+.ek-cta-heart {
+  top: 25%;
+  left: 8%;
+  color: #f6b9c2;
+  font-size: 35px;
+}
+
+/* =============================================
+   ANIMATION
+============================================= */
+
+@keyframes ep-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* =============================================
+   TABLET
+============================================= */
+
+@media (max-width: 1000px) {
+  .ek-programmes-hero {
+    gap: 15px;
+    padding: 50px 4%;
+  }
+
+  .ek-programmes-hero h1 {
+    font-size: 45px;
+  }
+
+  .ek-programmes-hero-visual {
+    transform: scale(0.9);
+  }
+
+  .ek-featured-cards {
+    min-height: 570px;
+  }
+
+  .ek-featured-card {
+    width: 49%;
+    padding: 13px;
+  }
+
+  .ek-featured-card-image {
+    height: 205px;
+  }
+
+  .ek-featured-card h3 {
+    font-size: 23px;
+  }
+
+  .ek-senior-programme {
+    gap: 35px;
+    padding: 80px 5%;
+  }
+
+  .ek-learning-benefit {
+    padding: 25px 19px;
+  }
+
+  .ek-programmes-cta {
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 45px;
+  }
+}
+
+/* =============================================
+   MOBILE AND SMALL TABLET
+============================================= */
+
+@media (max-width: 700px) {
+  .ek-programmes-hero {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    min-height: auto;
+    margin: 15px 4% 0;
+    padding: 40px 24px 45px;
+    border-radius: 25px;
+  }
+
+  .ek-programmes-hero h1 {
+    font-size: clamp(36px, 8vw, 47px);
+    letter-spacing: -1.3px;
+  }
+
+  .ek-programmes-hero-copy > p {
+    font-size: 13px;
+  }
+
+  .ek-programmes-hero-visual {
+    width: 100%;
+    max-width: 420px;
+    height: 290px;
+    margin: 10px auto 0;
+    transform: none;
+  }
+
+  .ek-hero-image-main {
+    height: 195px;
+  }
+
+  .ek-hero-image-small {
+    height: 135px;
+  }
+
+  .ek-programmes-intro {
+    padding: 65px 7% 55px;
+  }
+
+  .ek-programmes-intro h2,
+  .ek-featured-heading h2,
+  .ek-learning-approach-heading h2,
+  .ek-age-groups-heading h2 {
+    font-size: 34px;
+  }
+
+  .ek-featured-programmes {
+    padding: 60px 5% 45px;
+  }
+
+  .ek-featured-cards {
+    flex-direction: column;
+    gap: 25px;
+    min-height: auto;
+    margin-top: 35px;
+  }
+
+  .ek-featured-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 16px;
+  }
+
+  .ek-featured-card-first {
+    transform: rotate(-1.5deg);
+  }
+
+  .ek-featured-card-second {
+    margin-left: 0;
+    transform: rotate(1.5deg);
+  }
+
+  .ek-featured-card-first:hover,
+  .ek-featured-card-second:hover {
+    transform: translateY(-4px);
+  }
+
+  .ek-featured-card-image {
+    height: 240px;
+  }
+
+  .ek-featured-card h3 {
+    font-size: 26px;
+  }
+
+  .ek-featured-card p {
+    font-size: 12px;
+  }
+
+  .ek-featured-card-features span {
+    font-size: 10px;
+  }
+
+  .ek-featured-bottom-note {
+    margin-top: 30px;
+    font-size: 10px;
+  }
+
+  .ek-featured-sun {
+    top: 20px;
+    left: 4%;
+    font-size: 30px;
+  }
+
+  .ek-featured-star {
+    top: 170px;
+    right: 3%;
+    font-size: 27px;
+  }
+
+  .ek-featured-flower {
+    display: none;
+  }
+
+  .ek-senior-programme {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 65px 7%;
+  }
+
+  .ek-senior-programme-image,
+  .ek-senior-programme-image img {
+    min-height: 0;
+    height: 300px;
+  }
+
+  .ek-senior-programme-content h2 {
+    font-size: 34px;
+  }
+
+  .ek-learning-approach {
+    padding: 65px 6%;
+  }
+
+  .ek-learning-benefits {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .ek-learning-benefit {
+    padding: 25px;
+  }
+
+  .ek-learning-benefit h3 {
+    font-size: 18px;
+  }
+
+  .ek-learning-benefit p {
+    font-size: 12px;
+  }
+
+  .ek-age-groups {
+    padding: 65px 6%;
+  }
+
+  .ek-age-group-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .ek-age-group-card {
+    display: grid;
+    grid-template-columns: 55px 1fr 38px;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .ek-age-group-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+  .ek-age-group-info h3 {
+    font-size: 17px;
+  }
+
+  .ek-age-group-info p {
+    font-size: 11px;
+  }
+
+  .ek-age-group-arrow {
+    width: 35px;
+    height: 35px;
+    margin-top: 0;
+  }
+
+  .ek-programmes-cta {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    min-height: auto;
+    margin: 0 5% 60px;
+    padding: 40px 25px 25px;
+    border-radius: 25px;
+  }
+
+  .ek-programmes-cta h2 {
+    font-size: 36px;
+  }
+
+  .ek-programmes-cta-art {
+    min-height: 235px;
+  }
+
+  .ek-cta-circle {
+    width: 195px;
+    height: 195px;
+  }
+
+  .ek-cta-circle strong {
+    font-size: 42px;
+  }
+}
+
+/* =============================================
+   SMALL MOBILE
+============================================= */
+
+@media (max-width: 400px) {
+  .ek-programmes-hero {
+    padding: 33px 19px 35px;
+  }
+
+  .ek-programmes-hero h1 {
+    font-size: 34px;
+  }
+
+  .ek-programmes-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ek-programmes-hero-visual {
+    height: 245px;
+  }
+
+  .ek-hero-image-main {
+    height: 170px;
+  }
+
+  .ek-hero-image-small {
+    height: 115px;
+  }
+
+  .ek-featured-card-image {
+    height: 200px;
+  }
+
+  .ek-featured-card-content {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .ek-featured-card h3 {
+    font-size: 23px;
+  }
+
+  .ek-age-group-card {
+    grid-template-columns: 45px 1fr 32px;
+    gap: 10px;
+    padding: 15px 12px;
+  }
+
+  .ek-age-group-icon {
+    width: 43px;
+    height: 43px;
+    font-size: 23px;
+  }
+
+  .ek-age-group-info h3 {
+    font-size: 15px;
+  }
+
+  .ek-age-group-arrow {
+    width: 31px;
+    height: 31px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-programmes-page *,
+  .ek-programmes-page *::before,
+  .ek-programmes-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

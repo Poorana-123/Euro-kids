@@ -1,0 +1,526 @@
+/* ========================================
+   EUROKIDS PROGRAMME SECTION
+   Navy Blue + Yellow + Cream
+======================================== */
+
+.ek-programs-section {
+  --program-navy: #21478f;
+  --program-dark: #17356f;
+  --program-blue: #4268b3;
+  --program-yellow: #ffd15b;
+  --program-cream: #fffaf1;
+  --program-soft-blue: #eaf1ff;
+  --program-text: #27344a;
+  --program-muted: #737c8d;
+
+  position: relative;
+  padding: 95px 7% 70px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 0% 15%,
+      rgba(255, 209, 91, 0.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 100% 80%,
+      rgba(66, 104, 179, 0.09),
+      transparent 25%
+    ),
+    var(--program-cream);
+  color: var(--program-text);
+  font-family: inherit;
+}
+
+.ek-programs-section *,
+.ek-programs-section *::before,
+.ek-programs-section *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.ek-programs-heading {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.ek-programs-eyebrow {
+  display: inline-block;
+  margin-bottom: 17px;
+  padding: 9px 16px;
+  border: 1px solid #e4eafa;
+  border-radius: 50px;
+  background: #ffffff;
+  color: var(--program-navy);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.ek-programs-heading h2 {
+  margin: 0;
+  color: var(--program-dark);
+  font-size: clamp(34px, 4vw, 49px);
+  font-weight: 850;
+  line-height: 1.16;
+  letter-spacing: -1.6px;
+}
+
+.ek-programs-heading h2 span {
+  color: var(--program-blue);
+}
+
+.ek-programs-heading p {
+  max-width: 580px;
+  margin: 19px auto 0;
+  color: var(--program-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ========================================
+   DECORATIVE ELEMENTS
+======================================== */
+
+.ek-programs-decoration {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ek-programs-sun {
+  top: 115px;
+  left: 5%;
+  color: #eabd42;
+  font-size: 48px;
+  animation: ek-program-float 4s ease-in-out infinite;
+}
+
+.ek-programs-star {
+  top: 290px;
+  right: 6%;
+  color: #8b75d8;
+  font-size: 35px;
+  animation: ek-program-float 5s ease-in-out infinite;
+}
+
+.ek-programs-circle {
+  right: 9%;
+  bottom: 100px;
+  color: #68b989;
+  font-size: 45px;
+}
+
+/* ========================================
+   PROGRAMME CARD
+======================================== */
+
+.ek-program-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 430px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(33, 71, 143, 0.06);
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 0 20px 65px rgba(33, 71, 143, 0.09);
+  transition:
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.ek-program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 27px 70px rgba(33, 71, 143, 0.14);
+}
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.ek-program-image-wrap {
+  position: relative;
+  min-height: 430px;
+  padding: 22px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 20% 15%,
+      rgba(255, 209, 91, 0.45),
+      transparent 35%
+    ),
+    var(--program-soft-blue);
+}
+
+.ek-program-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 385px;
+  object-fit: cover;
+
+  /* Organic image shape inspired by the reference */
+  border-radius: 42% 24% 37% 22% / 24% 35% 25% 39%;
+
+  transition:
+    transform 0.6s ease,
+    border-radius 0.6s ease;
+}
+
+.ek-program-card:hover .ek-program-image {
+  transform: scale(1.035);
+  border-radius: 28px;
+}
+
+.ek-program-age {
+  position: absolute;
+  right: 34px;
+  bottom: 36px;
+  padding: 12px 17px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  background: var(--program-yellow);
+  color: var(--program-dark);
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(23, 53, 111, 0.12);
+}
+
+.ek-program-image-decoration {
+  position: absolute;
+  top: 35px;
+  right: 38px;
+  color: #ffffff;
+  font-size: 34px;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.ek-program-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 43px 42px;
+}
+
+.ek-program-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--program-blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.ek-program-content h3 {
+  margin: 0;
+  color: var(--program-dark);
+  font-size: clamp(29px, 3vw, 39px);
+  font-weight: 850;
+  line-height: 1.17;
+  letter-spacing: -1.1px;
+}
+
+.ek-program-content > p {
+  margin: 18px 0 22px;
+  color: var(--program-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* ========================================
+   PROGRAMME HIGHLIGHTS
+======================================== */
+
+.ek-program-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 25px;
+}
+
+.ek-program-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  border: 1px solid #e7edf8;
+  border-radius: 50px;
+  background: #f8faff;
+  color: var(--program-dark);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ek-highlight-icon {
+  color: #d5a51d;
+  font-size: 15px;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.ek-program-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  min-height: 52px;
+  padding: 0 20px;
+  border: 2px solid var(--program-yellow);
+  border-radius: 13px;
+  background: var(--program-yellow);
+  color: var(--program-dark);
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ek-program-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--program-navy);
+  background: var(--program-navy);
+  color: #ffffff;
+}
+
+.ek-program-button-arrow {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 19px;
+  transition: transform 0.3s ease;
+}
+
+.ek-program-button:hover .ek-program-button-arrow {
+  transform: translateX(3px);
+}
+
+/* ========================================
+   BOTTOM MESSAGE
+======================================== */
+
+.ek-programs-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 37px;
+  color: var(--program-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.ek-programs-footer-note span {
+  color: #e6b52d;
+  font-size: 16px;
+}
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes ek-program-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .ek-programs-section {
+    padding: 75px 5% 60px;
+  }
+
+  .ek-program-card {
+    grid-template-columns: 0.9fr 1.1fr;
+    min-height: 400px;
+  }
+
+  .ek-program-image-wrap {
+    min-height: 400px;
+    padding: 17px;
+  }
+
+  .ek-program-image {
+    min-height: 365px;
+  }
+
+  .ek-program-content {
+    padding: 32px 27px;
+  }
+
+  .ek-program-content h3 {
+    font-size: 32px;
+  }
+
+  .ek-program-highlights {
+    gap: 7px;
+  }
+
+  .ek-program-highlight {
+    padding: 8px 9px;
+    font-size: 9px;
+  }
+
+  .ek-programs-sun {
+    left: 1%;
+    font-size: 36px;
+  }
+
+  .ek-programs-star {
+    right: 2%;
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+  .ek-programs-section {
+    padding: 60px 5% 45px;
+  }
+
+  .ek-programs-heading {
+    margin-bottom: 30px;
+  }
+
+  .ek-programs-heading h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+
+  .ek-programs-heading p {
+    font-size: 13px;
+  }
+
+  .ek-program-card {
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
+
+  .ek-program-image-wrap {
+    min-height: 285px;
+    padding: 18px;
+  }
+
+  .ek-program-image {
+    min-height: 250px;
+    max-height: 330px;
+  }
+
+  .ek-program-content {
+    padding: 30px 23px 27px;
+  }
+
+  .ek-program-content h3 {
+    font-size: 34px;
+  }
+
+  .ek-program-content > p {
+    font-size: 13px;
+  }
+
+  .ek-program-age {
+    right: 29px;
+    bottom: 29px;
+  }
+
+  .ek-programs-sun {
+    top: 25px;
+    left: 4%;
+    font-size: 29px;
+  }
+
+  .ek-programs-star {
+    top: 200px;
+    right: 3%;
+    font-size: 25px;
+  }
+
+  .ek-programs-circle {
+    display: none;
+  }
+
+  .ek-programs-footer-note {
+    gap: 7px;
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+  .ek-programs-heading h2 {
+    font-size: 30px;
+  }
+
+  .ek-program-content {
+    padding: 25px 18px;
+  }
+
+  .ek-program-content h3 {
+    font-size: 30px;
+  }
+
+  .ek-program-highlights {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ek-program-highlight {
+    font-size: 10px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-programs-section *,
+  .ek-programs-section *::before,
+  .ek-programs-section *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
