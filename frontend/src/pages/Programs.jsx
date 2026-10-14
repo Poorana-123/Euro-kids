@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/Programs.css";
-import Program from "../assets/Kids1.jpg";
-import Program1 from "../assets/ukg.webp";
+import Program from "../assets/copy.jpg";
+import Program1 from "../assets/ukg.webp"
 
 const programmes = [
   {

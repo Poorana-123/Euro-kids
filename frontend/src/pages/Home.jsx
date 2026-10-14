@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import "../styles/App.css";
-import Kids1 from "../assets/Kids1.jpg";
+import Kids1 from "../assets/copy.jpg";
 import Kids2 from "../assets/ukg.webp";
 import team from "../assets/team.webp";
 
