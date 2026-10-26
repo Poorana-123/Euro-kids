@@ -20,6 +20,7 @@ import {
 
 import "./About.css";
 
+
 const learningValues = [
   {
     icon: Heart,

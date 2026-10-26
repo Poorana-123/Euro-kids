@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import "../styles/Navbar.css";
 
-import logo from "../assets/euro-kids-logo-removebg-preview.png";
+import logo from "../assets/new1-removebg-preview.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
