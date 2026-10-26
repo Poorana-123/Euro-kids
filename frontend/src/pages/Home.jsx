@@ -186,16 +186,17 @@ function Home() {
               </p>
 
               <div className="ek-hero-actions">
-                <a href="/programmes" className="ek-button ek-button-primary">
+                
+                <Link to="/programmes" className="ek-button ek-button-primary">
                   Explore Programmes
                   <span>↗</span>
-                </a>
+                </Link>
 
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="ek-button ek-button-outline">
                   Enquire for Admission
-                </a>
+                </Link>
               </div>
 
               <div className="ek-hero-highlights">
