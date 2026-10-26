@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/Gallery.css";
 import ProgramsSection from "../components/ProgramsSection";
+import {Link } from "react-router-dom";
 
 const galleryImages = [
   {
