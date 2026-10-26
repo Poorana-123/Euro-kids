@@ -530,10 +530,10 @@ function Home() {
                 things and celebrate every little achievement.
               </p>
 
-              <a href="/contact" className="ek-button ek-button-primary">
+              <Link to="/contact" className="ek-button ek-button-primary">
                 Get to Know Us
                 <span>↗</span>
-              </a>
+              </Link>
             </div>
 
             <div className="ek-why-grid">

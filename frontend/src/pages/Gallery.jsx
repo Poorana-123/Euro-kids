@@ -297,12 +297,12 @@ function Gallery() {
             explore and shine every day.
           </p>
 
-          <a
-            href="/contact#admission-enquiry"
-            className="ek-gallery-cta-btn"
+          <Link
+            to="/contact#admission-enquiry"
+            className="ek-programmes-btn ek-programmes-btn-yellow"
           >
             Book a Visit <span>→</span>
-          </a>
+          </Link>
         </div>
 
         <div className="ek-gallery-cta-art" aria-hidden="true">

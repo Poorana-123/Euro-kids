@@ -623,10 +623,10 @@ function About() {
                 journey. We'd love to help you take the next little step.
               </p>
 
-              <a href="/contact#enquiry" className="about-cta-button">
+              <Link to="/contact#enquiry" className="about-cta-button">
                 Enquire About Admissions
                 <ArrowRight size={19} />
-              </a>
+              </Link>
             </div>
 
             <div className="about-cta-illustration" aria-hidden="true">
